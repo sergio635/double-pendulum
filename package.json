@@ -4,12 +4,15 @@
   "description": "Double Pendulum Simulation",
   "dependencies": {
     "dat.gui": "0.7.3",
-    "lodash": "4.17.11"
+    "lodash": "4.17.11",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@babel/core": "7.1.2",
     "@babel/plugin-proposal-class-properties": "7.1.0",
     "@babel/preset-env": "7.1.0",
+    "@babel/preset-react": "^7.28.5",
     "babel-loader": "8.0.4",
     "css-loader": "1.0.0",
     "style-loader": "0.23.1",
@@ -20,7 +23,9 @@
   "scripts": {
     "test": "test",
     "build": "npx webpack -p --env.production",
-    "start": "npx webpack-dev-server --open --env"
+    "start": "npx webpack-dev-server --open --env",
+    "build:api": "npx webpack --config webpack.config-api.js",
+    "start:api": "npx webpack-dev-server --config webpack.config-api.js --open"
   },
   "repository": {
     "type": "git",
